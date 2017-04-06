@@ -1,3 +1,4 @@
+"""
 # -*- coding: utf-8 -*-
 """
 Laboratórios de Matemática 2
@@ -46,7 +47,6 @@ C=sym('C')
 t=dados[:,0]
 Vin=dados[:,1]
 Vc=dados[:,2]
-
 #%%Exercicio 1
 disp('Exercício 1:')
 ti=0  #tempo inicial obtido pelos dados fornecidos
@@ -70,3 +70,14 @@ title(u'Representação gráfica de Vc e Vin em função do tempo')
 show()
 #%%Exercicio 3
 disp('\n\nExercício 3:')
+disp('Derivada númerica progressiva e momentos que iniciam a descarga do condensador')
+dDados=[]
+for i in range(1,len(dados)-1):
+    dDados.append((dados[i+1]-dados[i-1])/(2*dt))
+dDadosi = (dados[1]-dados[0])/dt
+dDadosf = (dados[-1]-dados[-2])/dt
+dDados = [dDadosi]+dDados+[dDadosf]
+figure();
+plot(t,dDados,'.r'); plot(t,dDados,'-b') #gráfico representativo da diferencial de "dados" (dDados)
+#%%Exercicio 4
+#%%alinea a

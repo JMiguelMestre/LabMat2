@@ -10,7 +10,7 @@ Autores
 1. 1160930 José Miguel Mestre Fernandes da Silva
 2. 1160675 Gil Espirito Santo Nunes
 3. 1160872 Maria João Guimarães
-"""
+""
 from __future__ import division
 from __future__ import print_function
 from LabMat1_Lib import *
